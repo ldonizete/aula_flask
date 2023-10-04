@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    color: purple;
+}
+
+button {
+    background-color: red;
+    color: #FFF;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
