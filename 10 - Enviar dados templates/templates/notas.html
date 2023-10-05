@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    <h1>Preenche as notas</h1>
+    <form action="http://127.0.0.1:5000/calculo" method="post">
+        {% for x in range(4) %}
+            <div>
+                <input 
+                    type="number" 
+                    min="0" 
+                    max="10" 
+                    name="nota{{x}}" 
+                    id="nota{{x}}"
+                    placeholder="Nota {{x}}"
+                    required
+                />
+            </div>
+        {% endfor %}
+        <p>
+            <button type="submit" style="background-color: black; color: white;">Enviar</button>
+        </p>
+    </form>
+</body>
+</html>

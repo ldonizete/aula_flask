@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Calculo</title>
+</head>
+<body>
+    {% if total >= 25 %}
+        <h1 style="color: blue;">Aprovado</h1>
+    {% elif total >= 20 %}
+        <h4 style="color:rgb(208, 255, 0);">Recuperação</h4>
+    {% else %}
+        <h5 style="color: red;" >Reprovado &#128542 </h5>
+    {% endif %}
+
+    <h1>Média é: {{media}}</h1>
+</body>
+</html>
