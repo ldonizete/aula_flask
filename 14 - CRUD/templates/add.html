@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Estudante</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Cadastrar novo Estudante</h1>
+    <form action="/add" class="container" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="nome" id="nome" placeholder="nome" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="idade" id="idade" placeholder="idade" class="form-control">
+            </div>
+        </div>
+        <br>
+        <div class="row col-xs-12">
+            <button type="submit" class="btn btn-block btn-success">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>
