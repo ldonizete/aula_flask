@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Editar "{{ post['title'] }}" {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="title">Titulo</label>
+    <input name="title" id="title" value="{{ request.form['title'] or post['title'] }}" required>
+    <label for="body">Corpo</label>
+    <textarea name="body" id="body" required>
+        {{ 
+            request.form['body'] 
+            or 
+            post['body']
+        }}
+    </textarea>
+    <input type="submit" value="Salvar">
+  </form>
+  <hr>
+  <form action="{{ url_for('blog.delete', id=post['id']) }}" method="post">
+    <input class="danger" type="submit" value="Delete" onclick="return confirm('Você quer deletar mesmo?')">
+  </form>
+{% endblock %}
